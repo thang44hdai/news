@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.rcvList.layoutManager = LinearLayoutManager(this)
         val viewModel = ViewModelProvider(this).get(viewModel::class.java)
-        val adapter = newsAdapter()
+        val adapter = newsAdapter(this)
         viewModel.get_data().observe(this){
             adapter.setNews(it)
             binding.rcvList.adapter = adapter

@@ -17,7 +17,6 @@ class viewModel : ViewModel() {
             }
             override fun onFailure(call: Call<news>, t: Throwable) {
             }
-
         })
         return data
     }
